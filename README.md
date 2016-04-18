@@ -1,6 +1,2 @@
 # Front-End Education
-
-
-
-
-## HTML Code
+### HTML Code
