@@ -9,6 +9,9 @@
   <li>[Tag] inline != block </li>
   <li>list 의 향연(ul,dl,ol)</li>
   <li>layout Table? data table?</li>
+  <li>HTML 4.01 / XHTML 1.0 / HTML5</li>
+  <li>HTML5 필수 Tag 20선</li>
+  <li>HTML5 내장콘텐츠(canvas,vedio, audio)</li>
 </ol>
 ### CSS  10강
 <ol>
@@ -16,6 +19,11 @@
   <li></li>
   <li></li>
   <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  
 </ol>
 ### Web Accessibility  10강
 
