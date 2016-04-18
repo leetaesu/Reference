@@ -27,7 +27,7 @@
   <li>CSS background</li>
   <li>CSS display</li>
 </ol>
-### HTML&CSS Sample
+### HTML&CSS 실전 예제
 <ol>
   <li></li>
   <li></li>
