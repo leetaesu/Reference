@@ -16,7 +16,7 @@
 ### CSS  11강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/css/]
 <ol>
   <li>CSS이란 ?</li>
-  <li>CSS2 ? CSS3?</li>
+  <li>CSS2? CSS3?</li>
   <li>CSS 표기법</li>
   <li>필수 CSS 30선</li>
   <li>CSS 약식속성</li>
