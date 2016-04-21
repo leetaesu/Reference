@@ -1,8 +1,8 @@
 # Front-End Education
 ### HTML 11강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/html/]
 <ol>
-  <li>HTML이란 ?</li>
-  <li>필수 Tag 30선</li>
+  <li>HTML이란 ? <strong style="color:#f9ca3a; margin-left:50px">[완료]</strong></li>
+  <li>필수 Tag 30선! <strong style="color:#c602ff; margin-left:50px">[진행중]</strong></li>
   <li>Meta Tag 의 신세계</li>
   <li>시멘틱 웹 ?</li>
   <li>크로스브라우징 ? IE? Chrome? Firefox?</li>
