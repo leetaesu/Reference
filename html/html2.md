@@ -74,9 +74,60 @@ br 태그는 단일 태그이기 때문에 <br /> 슬러시로 마무리를 지�
 
 [*4*] **input**
 
+input 태그는 폼안에 기본적인 컨트롤을 생성하죠, 
+input 태그안에 여러가지 속성을 제어할 수 있는데,
+type,name,value,size,width,height,max,maxlength,min 속성을 제어할 수 있습니다.
 
+**type** 속성은 필수 속성으로써
+
+* text : 텍스트 입력을 받기위한 필드로써 그대로 출력된다.
+* password : 비밀번호를 받기위한 필드로써 ●●● 식으로 출력된다.
+* checkbox : 복수 선택이 가능한 체크박스 생성 
+* radio : 체크박스와는 달리 단일 선택만 가능한 박스 생성  
+* submit : 송신버튼 생성  
+* reset : 리셋버튼 생성  
+* button : 범용버튼 생성.  
+* image : 이미지버튼 생성.  
+* file : 송신파일 선택필드 생성  
+* hidden : 필드를 html상에는 있지만 눈으로는 보여지지 않는다.
+
+**name** 속성   
+name="이름"(필수 속성) : 컨트롤의 이름 지정. type의 속성이 checkbox나 radio일 경우 name속성이 같은 값으로 지정되면 하나의 그룹으로 취급한다.
+
+**value** 속성  
+value="값" : 초기값을 미리 정할 수 있다.
+
+**size** 속성   
+size="폭" : 컨트롤의 폭을 지정. type속성이 text이거나 password일 경우 문자수를 지정하고 그외의 경우에는 가로폭의 픽셀값을 지정한다.
+
+**width , height** 속성  
+요소의 가로와 세로 사이즈를 조정할 수 있지만, css로 처리하기 때문에 자주 사용되지 않는다.
+
+**max , min** 속성 
+max , min는 input 요소에 허용하는 값의 최소 최대값을 지정하지만 자주 사용되지 않는다. 
+max,  : input요소에 허용하는 값의 최대값을 지정하지만 마찬가지로 사용되지 않는다.
+
+**maxlength** 속성  
+maxlength : type속성이 text이거나 password 일때 최대 글자수를 제한할 수 있게 해준다.
+
+###### 아래 이미지를 보시면 자주보이는 naver의 로그인 하는 창입니다. 
+
+![](image/img_html1_5.png)
+
+###### 아이디라고 표시된 곳이 type 속성이 text로 표시되어있는 상태이고 비밀번호라고 되있는곳은 type속성이 password 라고 기재가 되어있습니다. 이부분에 아이디와 비밀번호를 입력하게되면 아래 이미지처럼 적용됩니다.
+
+![](image/img_html1_6.png)  
+
+예제에서는 input의 기본적인 예제를 담아 보았습니다.
+
+[예제 확인하기](https://jsfiddle.net/413t53by/)
+
+---
 
 [*5*] **textarea**
+
+textarea는 사용자의 내용을 입력받을 수 있는 필드에요. 흔히들 보는 
+
 
 [*6*] **button**
 
