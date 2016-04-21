@@ -24,13 +24,13 @@ a 태그는 인라인[^1] 태그로서 텍스트나 이미지에 링크를 연�
 기본속성은 href , target 으로 구성됩니다.
 
 ``` html
-  <a href="http://www.naver.com" target="_blank">네이버 Go! Go!</a>
+<a href="http://www.naver.com" target="_blank">네이버 Go! Go!</a>
 ```
 
 target="_blank" 속성을 넣어주면 링크를 눌렀을 경우 링크가 새창으로 이동되요.
 
-```html
-  <a href="http://www.naver.com" target="_self">네이버 Go! Go!</a>
+``` html
+<a href="http://www.naver.com" target="_self">네이버 Go! Go!</a>
 ```
 
 ``` html
