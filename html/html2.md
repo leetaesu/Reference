@@ -51,6 +51,8 @@ br 태그는 단일 태그이기 때문에 <br /> 슬러시로 마무리를 지�
 
 [예제 확인하기](https://jsfiddle.net/juy1h5hr/1/)
 
+---
+
 3. input
 
 
