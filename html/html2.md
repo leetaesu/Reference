@@ -23,7 +23,8 @@ a 태그는 인라인[^1] 태그로서 텍스트나 이미지에 링크를 연�
 
 기본속성은 href , target 으로 구성됩니다.
 
-```<a href="http://www.naver.com" target="_blank">네이버 Go! Go!</a>```
+```html 
+<a href="http://www.naver.com" target="_blank">네이버 Go! Go!</a>```
 
 target="_blank" 속성을 넣어주면 링크를 눌렀을 경우 링크가 새창으로 이동되요.
 
@@ -98,4 +99,4 @@ br 태그는 단일 태그이기 때문에 <br /> 슬러시로 마무리를 지�
 17. body - html
 
 
-[^1]: 인라인속성은
+[^1]: 인라인속성은 캬하하
