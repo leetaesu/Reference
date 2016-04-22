@@ -164,7 +164,19 @@ textarea 의 간단한 예제를 아래에서 확인해보세요, 그리고 저�
 
 [*8*] **ol,ul,dl**
 
-[*9*] **div**
+[*9*] **div , p**
+
+div 요소는 태그자체는 특별한 의미가 없어서 문서의 레이아웃을 사용할 때 사용 되곤 해요. 그래서 모든 html 페이지에는 div태그가 가장 많이 들어가 있습니다. 무분별한 div 요소를 사용하지 마시고, 해당 의미가있는 태그를 사용하다가 의미가없이 정말 레이아웃만 적용 해야하는 부분에만 div 요소를 사용하셔야 됩니다.
+
+p태그 요소는 문단을 표시해요, 어렵게 생각하지 마시고 문단으로 구분된곳은 p태그로 묶어주시면 됩니당!
+
+```html
+<div>
+	<p>div태그는 레이아웃의 영역으로만 사용하시는 걸 권장해요</p>
+	<p>p 요소는 문단이란 말처럼 문단별로 구분 지을 수 있어요.</p>
+</div>
+```
+---
 
 [*10*] **form**
 
@@ -182,7 +194,27 @@ h태그는 1번부터 6번까지 지정 할 수 있어요. 숫자는 등급을 �
 
 [*12*] **iframe**
 
+iframe요소는 문서내에 다른 문서를 들어갈 때 사용됩니다.
 
+속성에는 
+
+* src : 출력될 내용의 URL 주소
+* name : iframe 의 이름
+* width : 가로 사이즈
+* height : 세로 사이즈
+* marginwidth : 좌우 여백
+* marginheight : 상하 여백
+* scrolling : 스크롤바 생성여부 (yes,no,auto) 
+* align : 정렬위치
+* frameborder : 프레임 테두리 경계선
+
+``` html
+<iframe id="abc" name="iframe" src="abc.html" width="100%" height="400px" scrolling="auto" frameborder="0" marginwidth="0">
+```
+
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/13/)
+
+---
 
 [*13*] **img**
 
@@ -254,6 +286,7 @@ select 속성에는 autofocus,disabled,form,multiple,name,required,size 의 여�
 
 [예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/9/)
 
+---
 
 [*16*] **strong - span**
 
