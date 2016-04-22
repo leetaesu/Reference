@@ -15,7 +15,7 @@ HTML 이라고 써있는 부분에 HTML 태그를 입력하고 CSS도 입혀보�
 
 ---
 
-#필수 Tag 17선
+#필수 Tag 16선
 
 [*1*] **a**   
 
@@ -39,7 +39,7 @@ target="_blank" 속성을 넣어주면 링크를 눌렀을 경우 링크가 새�
 
 target="_self" 속성은 현재페이지에서 링크로 이동되요. 하지만 _self 속성은 기본속성이니 적지 않으셔도 됩니다.
 
-[예제 확인하기](https://jsfiddle.net/0hoesebk/4/)
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/1/)
 
 ######그외에도 2개의 부분이 더있는데 이부분은 특별한 경우말고는 사용되지 않아요. 그래도 호기심 가득한 분이시라면 테스트 해보시는 것 을 추천합니다.
 ######_parent : 부모창에 해당 링크를 열어요
@@ -55,7 +55,7 @@ br 태그는 단일 태그이기 때문에 <br /> 슬러시로 마무리를 지�
 ```ex)삼치와 마요는 투닥투닥 대지만, 아플때는 서로를 아끼는 귀여운 고양이들이랍니다.``` 흔히 이런 텍스트가 있는경우 강제 개행이 필요할 때가 있겠죠? 이럴때는 
 ```ex)삼치와 마요는 투닥투닥 대지만,<br /> 아플때는 서로를 아끼는 귀여운 고양이들이랍니다.``` 해주면 투닥투닥 대지만, 에서 강제개행이 이루어 집니다. 텍스트뿐만 아니라 ```<br /><br /><br />``` 이런식으로 여러번을 작성햇을 경우 한줄 개행이아니라 3줄 개행이라 단락의 공간이 생깁니다. 여백을 주고 싶을때는 나중에 배울 css속성의 padding , margin 속성을 이용하도록 해요
 
-[예제 확인하기](https://jsfiddle.net/juy1h5hr/1/)
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/2/)
 
 ---
 
@@ -120,36 +120,71 @@ maxlength : type속성이 text이거나 password 일때 최대 글자수를 제�
 
 예제에서는 input의 기본적인 예제를 담아 보았습니다.
 
-[예제 확인하기](https://jsfiddle.net/413t53by/)
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/3/)
 
 ---
 
 [*5*] **textarea**
 
-textarea는 사용자의 내용을 입력받을 수 있는 필드에요. 흔히들 보는 
+textarea는 사용자의 내용을 입력받을 수 있는 필드에요. 댓글입력,문의내용 같은 곳에서 볼 수 있죠, textarea는 input과 마찬가지로 많은 속성들을 가지고 있어요.
 
+속성의 종류에는 
+
+* autofocus : 페이지가 새로고침이 되면 포커스가 자동으로 가게 해줍니다.
+* cols,rows : 표시될 폭을 문자수로 지정하는데 css 처리하는것이 좋습니다.
+* disabled : 모든 조작을 불가능 하게 합니다.
+* dirname : 요소의 방향성을 결정합니다.
+* form : 다른 폼 소유자와 명시적으로 연관시키기위해 사용됩니다.
+* maxlengh : type속성이 text이거나 password일 경우 최대 입력 문자수를 지정할수 있습니다.
+* name : textarea의 이름을 지정합니다
+* placeholder : 임의적으로 힌트를 보여줍니다. IE8 브라우저 이상만 지원합니다.
+* readonly : 컨트롤의 조작을 불가능하게 하지만 데이터는 서버에 전송한다. true ,false 로 지정해줘요
+* required : 필수요소인지를 지정합니다. true ,false 로 지정해줘요
+
+textarea 의 간단한 예제를 아래에서 확인해보세요, 그리고 저속성들이 무엇을 뜻하는지 한번쯤 적어서 확인해보시면 좋을 듯 싶어요
+
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/4/)
+
+---
 
 [*6*] **button**
 
+버튼 요소를 생성합니다. textarea처럼 속성은 autofocus,disabled, name, type, value 5가지가 있어요.  
+**type** 속성에서는  
+
+* submit : 폼을 제출합니다. 기본값입니다.
+* reset : 폼을 리셋합니다.
+* button : 아무것도 하지 않습니다.
+
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/5/)
+
+---
+
 [*7*] **table**
 
-[*8*] **input**
+[*8*] **ol,ul,dl**
 
-[*9*] **ol,ul,dl**
+[*9*] **div**
 
-[*10*] **div**
+[*10*] **form**
 
-[*11*] **form**
+[*11*] **h1~h6**
 
-[*12*] **h1~h6**
+h태그는 1번부터 6번까지 지정 할 수 있어요. 숫자는 등급을 나타내며 h1 이 가장 높은 등급이며 h6이 가장 낮은등급이죠. 예를들어 홈페이지를 만들때 로고부분은 h1이 되겟죠? 아래 콘텐츠 영역에서 기사영역처럼 한영역이 있는부분은 h3이 되겠죠
 
-[*13*] **iframe**
+![](image/img_html1_7.png)  
 
-[*14*] **img**
+한문서의 h1 요소는 한개만 사용하도록 해요. 그래서 로고부분이 가장 적당하겠죠?
 
-[*15*] **map**
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/6/)
 
-[*16*] **select**
+[*12*] **iframe**
 
-[*17*] **strong - span**
+[*13*] **img**
+
+[*14*] **map**
+
+[*15*] **select**
+
+[*16*] **strong - span**
 
