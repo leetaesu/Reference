@@ -227,13 +227,32 @@ area의 속성에는
 아래예제에서는 고양이 2마리를 클릭해보면 링크가 걸린걸 알 수 있어요.   
 (맵이 잘 적용되었나 확인하려고 href에 javascript 를 적은거이니 href부분은 신경안쓰셔도 됩니다)
 
-[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/8/)
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/12/)
 
 ---
 
 [*15*] **select**
 
+select 요소는 선택목록을 생성해줍니다. 선택요소이기 때문에 한개이상의 값이 들어가 있어야 하죠. 여기서 값은 option으로 처리해줍니다.
 
+select 속성에는 autofocus,disabled,form,multiple,name,required,size 의 여러개의 속성이 있는데 따른 기존에 input 이나 textarea 에서 보셨던 속성들이죠? 한가지 다른것이 보이네요 multiple 이라는 속성이 있는데 multiple은 복수선택이 가능해 집니다. 
+
+``` html
+<select name="category">
+	<optgroup label="고양이">
+      <option value="cat1">코리안 숏헤어</option>
+      <option value="cat2">아메리칸 숏헤어</option>
+	</optgroup>
+	<optgroup label="강아지">
+      <option value="dog1">리트리버</option>
+      <option value="dog2">시바견</option>
+	</optgroup>
+</select>
+```
+
+위 코드를 보면 option값을 묶어주는 그룹이 optgroup 라고 있죠? 이곳에 label 에 글자를 넣어두면 select 창에 클릭은 안되지만 묶여있는 그룹타이틀명 처럼 표현할 수 있어요. 
+
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/9/)
 
 
 [*16*] **strong - span**
