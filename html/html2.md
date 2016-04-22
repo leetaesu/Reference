@@ -178,11 +178,58 @@ h태그는 1번부터 6번까지 지정 할 수 있어요. 숫자는 등급을 �
 
 [예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/6/)
 
+---
+
 [*12*] **iframe**
+
+
 
 [*13*] **img**
 
+이미지 태그요소는 이미지를 화면에 출력해주는 요소에요. 5가지의 속성이있는데 
+
+1. src속성은 불러올 이미지의 주소를 나타내요 
+2. alt 태그는 이미지가 표시되지 않는 상황에 출력될 글씨를 표현해주거나 센스리더기같은 시각장애인이 이미지를 볼 수 없을때 내용을 짐작할 수 있도록 도와주는 용도로 사용 되기도 합니다.
+3. usemap 은 아래 map속성이 있을때 사용되요
+4. width 사이즈와 height 사이즈 속성도 있지만 css로 처리하는것이 더 좋습니다.
+  
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/7/)
+
 [*14*] **map**
+
+map 요소는 이미지에 링크를 걸때 사용하는데 하나를 걸때는 위에서 봤던 a링크를 사용하면 쉽게 링크를 적용시킬 수 있죠? 그런데 하나의 이미지에 여러개의 링크가 필요할때는 map을 사용하여 처리하면 간편하게 작업을 하실 수 있습니다.
+
+map요소를 작성할 때는 
+
+``` html
+<img src="이미지 경로" alt="이미지 설명" usemap="#imgMap">
+<map name="imgMap">
+	<area shape="rect" coords="0,0,348,438" href="링크주소" target="_blank"  alt="해당 링크걸 이미지 설명">
+	<area shape="circle" coords="364,0,712,438" href="링크주소" target="_blank"  alt="해당 링크걸 이미지 설명">
+	<area shape="poly" coords="364,0,712,438" href="링크주소" target="_blank"  alt="해당 링크걸 이미지 설명">
+</map>
+```
+위 부분을 보게되면 이미지부분에 usemap에 imgMap 이라는 이름과 map name 의 부분에 이름이 동일한 걸 볼 수 있어요. 이로써 저 이미지의 usemap의 속성은 아래 맵 이름과 동일하게 할 수 있게 처리된거에요.
+
+area의 속성에는
+
+1. shape : 영역의 형태를 지정하는데 rect 는 사각형이며 가장 많이 사용됩니다. circle는 원형이고, poly는 다각형인데 자주 사용 되지 않아요
+2. href는 a링크와 동일하게 링크를 적어주시면 되요
+3. alt는 대체텍스트로써 기존에 설명드린 부분과 동일합니다.
+4. coords 는 제일 중요한 부분인데 영역의 좌표 위치를 지정하는거에요. 
+
+** coords 좌표를 지정하는 방법은 나중에 photoshop 강의에서 설명 드릴게요 **
+
+* shape속성값이 rect일때 : 왼쪽위의 XY좌표와 오른쪽아래 XY좌표
+* shape속성값이 circle일때 : 중심의 XY좌표와 반경
+* shape속성값이 poly일때 : 첫번째 각의 XY좌표, 두번째각의 XY좌표, 세번째각의 XY좌표
+
+아래예제에서는 고양이 2마리를 클릭해보면 링크가 걸린걸 알 수 있어요.   
+(맵이 잘 적용되었나 확인하려고 href에 javascript 를 적은거이니 href부분은 신경안쓰셔도 됩니다)
+
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/8/)
+
+---
 
 [*15*] **select**
 
