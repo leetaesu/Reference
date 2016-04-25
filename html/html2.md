@@ -162,7 +162,57 @@ textarea 의 간단한 예제를 아래에서 확인해보세요, 그리고 저�
 
 [*7*] **table**
 
+table 태그는 데이터가 담겨진 표 로써 생각하면 편해요, 예전에는 레이아웃을 짤때 table 을 사용하여 과도한 테이블 사용으로 인해 유지보수 및 소스가 상당히 지저분 했어요. 이제 웹표준으로 넘어오면서 table은 데이터를 담고있는 표라고 생각하면 될듯 해요.  
+
+table은 머리,몸통,다리 라고 분류가 되있어서, thead,tbody,tfoot 으로써 table 의 종류를 표현 할 수 있어요. tr은 테이블은 단락을 의미하며 단락마다 th와 td를 사용하여 th는 제목이나 강조해야할부분 td는 설명,내용 이라고 보면 쉬어요!
+
+그리고 thead 위부분에 col 태그라고있는데 col 태그는 테이블의 가로간격을 지정할 수 있어요. 테이블이 4개라면 4개의 col 태그를 사용하여 원하는 사이즈를 각자 조정할 수 있죠, col태그를 묶는 colgroup 이라는 같이 사용해줘야 깔끔한 소스가 된답니다.
+
+그리고 caption이라고 테이블의 제목을 기재해줘야하는 태그가 있는데 이부분은 css속성으로 숨겨놓고 글만 적어서 표현만 해주게 작성해주면 되요.
+
+```html
+  <table cellpadding="0" cellspacing="0" border="3">
+	<caption>고양이 설명 도표</caption>
+	<colgroup>
+		<col style="width:20%" /><col style="width:auto" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th>회색고양이</th>
+			<td>러시안블루</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>한국 길고양이</th>
+			<td>코리안 숏헤어</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>하얀색고양이</th>
+			<td>터키쉬앙고라</td>
+		</tr>
+	</tfoot>
+  </table>
+```
+
+
+
 [*8*] **ol,ul,dl**
+
+ul,ol,dl 태그는 리스트 태그의 종류로써 3가지는 각각 다른 의미를 갖고 있는다.  
+
+ol과 ul는 li의 하위 구성을 가지며 ol은 순서가 있는 리스트를 사용할 때 사용하도록하고, ul은 순서가 중요하지 않은 리스트를 사용할떄 사용하죠!
+
+그럼 dl 용어 설명 그룹으로써 dt로 제목을 구분하며 dd로 내용을 구분해요.
+
+아래 그림으로 dl 과 ul , ol 의 사용된 곳을 보여드리도록 할게요.
+
+![](image/img_html1_8.png) 
+
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/14/)
+
 
 [*9*] **div , p**
 
