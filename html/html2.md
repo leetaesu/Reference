@@ -197,6 +197,7 @@ table은 머리,몸통,다리 라고 분류가 되있어서, thead,tbody,tfoot �
   </table>
 ```
 
+[예제 확인하기](https://jsfiddle.net/leetaesu/ynpa6jgj/15/)
 
 
 [*8*] **ol,ul,dl**

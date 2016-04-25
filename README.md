@@ -5,7 +5,7 @@
 ### HTML 11강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/html/]
 <ol>
   <li>HTML이란 ? <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/html/html1.md">강의 바로가기</a></li>
-  <li>필수 Tag 15선! <strong>[진행중]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/html/html2.md">강의 바로가기</a></li>
+  <li>필수 Tag 15선! <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/html/html2.md">강의 바로가기</a></li>
   <li>Meta Tag 의 신세계</li>
   <li>시멘틱 웹 ?</li>
   <li>크로스브라우징 ? IE? Chrome? Firefox?</li>
