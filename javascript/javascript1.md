@@ -37,3 +37,36 @@ var 인스턴스 = {
 
 ```
 
+2. 함수 방식
+
+```javascript
+
+function 클래스이름(){
+	this.프로퍼티1 = 초깃값;
+	this.프로퍼티2 = 초깃값;
+
+	this.메서드1=function(){
+
+	}
+	this.메서드2=function(){
+
+	}	
+}
+
+```
+
+3. 프로토타입 방식
+
+```javascript
+
+function 클래스이름(){
+	this.프로퍼티1 = 초깃값;
+	this.프로퍼티2 = 초깃값;
+}
+클래스이름.prototype.메서드1=function(){
+
+}
+클래스이름.prototype.메서드2=function(){
+
+}
+```
