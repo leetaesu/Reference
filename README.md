@@ -21,9 +21,12 @@
 ### javascript 5강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/javascript/]
 <ol>
   <li>자바스크립트에서 클래스란? <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/javascript/javascript1.md">강의 바로가기</a></li>
+  <li>오브젝트 리터럴 방식으로 클래스 만들기 <strong>[진행중]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/javascript/javascript2.md">강의 바로가기</a></li>
+  <li>함수방식으로 클래스 만들기 <strong>[진행중]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/javascript/javascript3.md">강의 바로가기</a></li>
+  <li>프로토타입으로 방식으로 클래스 만들기 <strong>[진행중]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/javascript/javascript4.md">강의 바로가기</a></li>
+  <li>클래스 정의 방법 3가지 비교 <strong>[진행중]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/javascript/javascript5.md">강의 바로가기</a></li>
   <li></li>
-  <li></li>
-  <li></li>
+
 </ol>
 
 
