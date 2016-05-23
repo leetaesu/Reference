@@ -6,7 +6,7 @@
 <ol>
   <li>HTML이란 ? <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/html/html1.md">강의 바로가기</a></li>
   <li>필수 Tag 15선! <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/html/html2.md">강의 바로가기</a></li>
-  <li>Meta Tag 의 신세계 <strong>[진행중]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/html/html3.md">강의 바로가기</a></li>
+  <li>Meta Tag 의 신세계 <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/html/html3.md">강의 바로가기</a></li>
   <li>시멘틱 웹 ?</li>
   <li>크로스브라우징 ? IE? Chrome? Firefox?</li>
   <li>[Tag] inline != block </li>
@@ -16,6 +16,27 @@
   <li>HTML5 필수 Tag 20선</li>
   <li>HTML5 내장콘텐츠(canvas,vedio, audio)</li>
 </ol>
+
+
+### javascript 5강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/javascript/]
+<ol>
+  <li>자바스크립트에서 클래스란? <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/javascript/javascript1.md">강의 바로가기</a></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+
+
+### Web Accessibility  10강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/Accessibility/]
+<ol>
+  <li>Web Accessibility ?</li>
+  <li>웹접근성 기본 사항 <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/Accessibility/Accessibility2.md">강의 바로가기</a></li>
+  <li></li>
+  <li></li>
+</ol>
+
+
+
 ### CSS  11강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/css/]
 <ol>
   <li>CSS이란 ?</li>
@@ -45,15 +66,6 @@
 <ol>
   <li>Mobile Web ? Responsive Web ?</li>
   <li>해상도? Font?</li>
-  <li></li>
-  <li></li>
-</ol>
-
-
-### Web Accessibility  10강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/Accessibility/]
-<ol>
-  <li>Web Accessibility ?</li>
-  <li>웹접근성 기본 사항 <strong>[완료]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/Accessibility/Accessibility2.md">강의 바로가기</a></li>
   <li></li>
   <li></li>
 </ol>

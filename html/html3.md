@@ -44,6 +44,10 @@ Meta Tag 는 html에서 문서 자체를 설명을 해주거나 문서시작시 
 	   :그림위에 마우스 오버시 이미지 관련 툴바가 생기지 않음.	
 	<META HTTP-EQUIV="Refresh" content="15;URL=http://galaxy.channeli.net/jakalky/sitemap.htm">
 	   :페이지이동
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> IE 브라우저의 문서모드를 최신버전으로 지정
+
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> ie8의 익스플로러 브라우저를 IE7처럼 보이게 지정
+
 	
 	<META HTTP-EQUIV="Page-Enter" content="RevealTrans(Duration=5/시간 초단위, Transition=21) ">
 	  :페이지 로딩시 트랜지션 효과(장면 전환 효과)
