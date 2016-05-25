@@ -198,6 +198,56 @@ function TabMenu(){
 	}
 }
 
+```
+
+이렇게 변경된 함수방식 클래스는 기존 오브젝트 리터럴과 달리 여러개의 탭이 생성되어도 인스턴스만 추가되면 쉽게 추가가 가능합니다
+
+```javascript
+
+// 상단 기존코드
+$(document).ready(function(){
+	// 인스턴스 생성
+	var tabMenu1 = new TabMenu();
+	tabMenu1.init();
+	tabMenu1.initEvent();
+});
+
+// --> 변경 (init 함수와 initEvent 함수를 내부로 바꾸고 새롭게 인스턴스만 추가해준다
+$(document).ready(function(){
+	// 인스턴스 생성
+    var tabMenu1 = new TabMenu("#tabMenu1");
+	var tabMenu2 = new TabMenu("#tabMenu2");
+});
+
+
+// 상단 기존코드
+function TabMenu(){
+	this.$tabMenu =null;
+	this.$menuItems=null;
+	this.$selectMenuItem=null;
+	// 요소 초기화
+	this.init = function() {
+		this.$tabMenu = $("#tabMenu1");
+		this.$menuItems = this.$tabMenu.find("li");
+	}
+
+
+// --> 변경 (init 함수에 매개변수를 받아서 지정해주면 인스턴스만 실행해주면 쉽게 탭메뉴를 추가 시킬수 있다.
+function TabMenu(selector){
+    this.$tabMenu =null;
+    this.$menuItems=null;
+    this.$selectMenuItem=null;
+    // 요소 초기화
+    this.init = function(selector) {
+        this.$tabMenu = $(selector);
+        this.$menuItems = this.$tabMenu.find("li");
+    }
+
+...
+
+	// 해당 인스턴스 생성자로 호출된부분의 init함수와 initEvent를 실행한다.
+    this.init(selector);
+    this.initEvent();
 
 ```
 
