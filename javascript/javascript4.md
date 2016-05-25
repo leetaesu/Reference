@@ -47,7 +47,6 @@ user.showInfo();
 ```javscript
 
 //prototype에 메서드를 만들어줍니다.
-
 클래스이름.prototype.메서드1=function(){
 }
 
@@ -57,9 +56,91 @@ user.showInfo();
 
 기존에 오브젝트 리터럴 방식과 함수 방식 클래스로 만든것처럼 이번에도 함수단위로 된 코드를 프로토타입 방식으로 변경해 봅시다.
 
+#### 기존 함수단위 코드
+```javascript
 
+var $tabMenu =null;
+var $menuItems=null;
+var $selectMenuItem=null;
 
+$(document).ready(function(){
+	// 탭메뉴 요소 초기화
+	init();
+	// 탭메뉴 요소에 이벤트 등록
+	initEvent();
+});
 
+// 요소 초기화
+function init(){
+	$tabMenu = $("#tabMenu1");
+	$menuItems = $tabMenu.find("li");
+}
+
+// 이벤트 등록
+function initEvent(){
+	$menuItems.on("click",function(){
+		setSelectItem($(this));
+	});
+}
+
+// $menuItem에 해당하는 메뉴 아이템 선택하기
+function setSelectItem($menuItem){
+	// 기존 선택메뉴 아이템을 비활성화 처리 하기
+	if($selectMenuItem){
+		$selectMenuItem.removeClass("select");
+	}
+
+	// 신규 아이템 활성화 처리 하기
+	$selectMenuItem = $menuItem;
+	$selectMenuItem.addClass("select");
+}
+
+```
+#### 프로토타입 방식 코드 변경
+```javascript
+
+$(document).ready(function(){
+	// 인스턴스 생성
+	var tabMenu1 = new TabMenu();
+	//요소 초기화 및 이벤트 등록 호출하기
+	tabMenu1.init();
+	tabMenu1.initEvent();
+});
+
+function TabMenu() {
+	this.$tabMenu = null;
+	this.$menuItems = null;
+	this.$selectMenuItem = null;
+}
+
+// 요소 초기화
+TabMenu.prototype.init=function(){
+
+	this.$tabMenu = $("#tabMenu1");
+	this.$menuItems = this.$tabMenu.find("li");
+}
+
+// 이벤트 등록
+TabMenu.prototype.initEvent = function() {
+	var objThis = this;
+	this.$menuItems.on("click", function() {
+		objThis.setSelectItem($(this));
+	});
+}
+
+// $menuItem에 해당하는 메뉴 아이템 선택하기
+TabMenu.prototype.setSelectItem = function($menuItem) {
+	// 기존 선택메뉴 아이템을 비활성화 처리 하기
+	if (this.$selectMenuItem) {
+		this.$selectMenuItem.removeClass("select");
+	}
+
+	// 신규 아이템 활성화 처리 하기
+	this.$selectMenuItem = $menuItem;
+	this.$selectMenuItem.addClass("select");
+}
+
+```
 
 
 
