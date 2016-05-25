@@ -1,6 +1,6 @@
 # Front-End Education
 
-###강의 진행사항 3/70
+###강의 진행사항 8/70
 
 ### HTML 11강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/html/]
 <ol>
