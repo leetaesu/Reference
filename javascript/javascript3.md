@@ -48,3 +48,159 @@ function 클래스이름(){
 var user = new 클래스이름();
 
 ```
+
+1. 함수 방식에서 프로퍼티와 메서드는 this에 만들어 줍니다.
+2. 인스턴스 생성 방법은 "클래스이름" 함수를 호출할 때 new 키워드를 추가해 호출해 준다.
+
+
+만약 new 를 붙이지 않으면 인스턴스 생성이 아닌 함수 호출이 되어 정상적으로 작동하지 않게 됩니다.
+
+```javascript
+
+//인스턴스 생성 방법
+
+function 클래스이름(){
+	this.프로퍼티1 = 초깃값;
+	this.메서드1 = function(){}
+}
+
+var 인스턴스 = new 클래스이름();
+
+```
+
+객체 외부에서 프로퍼티와 메서드 접근 방법은 전 단계에서 배운 오브젝트 리터럴 방식처럼 함수 방식도 접근하려면 접근 연산자를 사용하여 접근 할수 있습니다.
+
+```javascript
+
+// 객체 외부에서 프로퍼티 메서드 접근방법
+
+function 클래스이름(){
+	this.프로퍼티1 = 초깃값;
+	this.메서드1 = function(){}
+}
+
+var 인스턴스 = new 클래스이름();
+인스턴스.프로퍼티1;
+인스턴스.메서드1();
+
+```
+
+```javascript
+
+// 객체 내부에서 프로퍼티 메서드 접근방법
+
+function 클래스이름(){
+	this.프로퍼티1 = 초깃값;
+	this.메서드1 = function(){
+		this.프로퍼티1;
+		this.메서드2();
+	}
+	this.메서드2 = function(){
+	}
+}
+
+var 인스턴스 = new 클래스이름();
+
+```
+
+---
+
+기존에 함수 단위 방식의 코드를 함수 방식 클래스 코드로 변경해보자 
+
+```javascript 
+
+// 함수 단위 코드
+
+var $tabMenu =null;
+var $menuItems=null;
+var $selectMenuItem=null;
+
+$(document).ready(function(){
+	// 탭메뉴 요소 초기화
+	init();
+	// 탭메뉴 요소에 이벤트 등록
+	initEvent();
+});
+
+// 요소 초기화
+function init(){
+	$tabMenu = $("#tabMenu1");
+	$menuItems = $tabMenu.find("li");
+}
+
+// 이벤트 등록
+function initEvent(){
+	$menuItems.on("click",function(){
+		setSelectItem($(this));
+	});
+}
+
+// $menuItem에 해당하는 메뉴 아이템 선택하기
+function setSelectItem($menuItem){
+	// 기존 선택메뉴 아이템을 비활성화 처리 하기
+	if($selectMenuItem){
+		$selectMenuItem.removeClass("select");
+	}
+
+	// 신규 아이템 활성화 처리 하기
+	$selectMenuItem = $menuItem;
+	$selectMenuItem.addClass("select");
+}
+
+```
+
+이전 오브젝트 리터럴 방식과 동일하게
+
+1. 클래스 생성하기
+2. 변수를 프로퍼티로 만들기
+3. 함수를 메서드로 만들기
+4. 객체 내부에서 프로퍼티와 메서드 사용하기
+5. 인스턴스 사용하기
+6. 객체 외부에서 프로퍼티와 메서드 사용하기
+
+```javascript 
+
+$(document).ready(function(){
+	// 인스턴스 생성
+	var tabMenu1 = new TabMenu();
+	tabMenu1.init();
+	tabMenu1.initEvent();
+});
+
+function TabMenu(){
+	this.$tabMenu =null;
+	this.$menuItems=null;
+	this.$selectMenuItem=null;
+	// 요소 초기화
+	this.init = function() {
+		this.$tabMenu = $("#tabMenu1");
+		this.$menuItems = this.$tabMenu.find("li");
+	}
+
+	// 이벤트 등록
+	this.initEvent = function() {
+		var objThis = this;
+		this.$menuItems.on("click", function() {
+			objThis.setSelectItem($(this));
+		});
+	}
+
+	// $menuItem에 해당하는 메뉴 아이템 선택하기
+	this.setSelectItem = function($menuItem) {
+		// 기존 선택메뉴 아이템을 비활성화 처리 하기
+		if (this.$selectMenuItem) {
+			this.$selectMenuItem.removeClass("select");
+		}
+
+		// 신규 아이템 활성화 처리 하기
+		this.$selectMenuItem = $menuItem;
+		this.$selectMenuItem.addClass("select");
+	}
+}
+
+
+```
+
+
+
+
