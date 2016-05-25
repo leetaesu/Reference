@@ -107,6 +107,7 @@ var 인스턴스 = new 클래스이름();
 
 기존에 함수 단위 방식의 코드를 함수 방식 클래스 코드로 변경해보자 
 
+#### 기존 함수단위 코드
 ```javascript 
 
 // 함수 단위 코드
@@ -158,6 +159,7 @@ function setSelectItem($menuItem){
 5. 인스턴스 사용하기
 6. 객체 외부에서 프로퍼티와 메서드 사용하기
 
+#### 프로토타입 방식 코드 변경
 ```javascript 
 
 $(document).ready(function(){

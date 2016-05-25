@@ -17,6 +17,7 @@ user.showInfo();
 
 아래 함수단위 코딩으로 만들어진 탭메뉴를 
 
+#### 기존 함수단위 코드
 ```javascript
 
 // 탭메뉴 관련 변수
@@ -69,6 +70,7 @@ function setSelectItem($menuItem){
 
 를 이용하여 클래스를 작성해보자
 
+#### 프로토타입 방식 코드 변경
 ```javascript
 
 $(document).ready(function(){
