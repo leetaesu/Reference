@@ -115,7 +115,6 @@ function TabMenu() {
 
 // 요소 초기화
 TabMenu.prototype.init=function(){
-
 	this.$tabMenu = $("#tabMenu1");
 	this.$menuItems = this.$tabMenu.find("li");
 }
@@ -141,6 +140,67 @@ TabMenu.prototype.setSelectItem = function($menuItem) {
 }
 
 ```
+
+---
+
+#### 프로토타입 방식 코드에 새로운 탭 메뉴 추가하기
+```javascript
+
+/// 상단 기존 코드 
+$(document).ready(function(){
+	// 인스턴스 생성
+	var tabMenu1 = new TabMenu();
+	//요소 초기화 및 이벤트 등록 호출하기
+	tabMenu1.init();
+	tabMenu1.initEvent();
+});
+
+/// 변경 코드 
+$(document).ready(function(){
+	// 인스턴스 생성
+	var tabMenu1 = new TabMenu("#tabMenu1");
+	var tabMenu2 = new TabMenu("#tabMenu2");
+});
+
+//-------------------------------------------------
+
+/// 상단 기존 코드 
+function TabMenu() {
+	this.$tabMenu = null;
+	this.$menuItems = null;
+	this.$selectMenuItem = null;
+}
+
+/// 변경 코드 
+function TabMenu(selector){
+	this.$tabMenu =null;
+	this.$menuItems=null;
+	this.$selectMenuItem=null;
+	this.init(selector);
+	this.initEvent();
+}
+
+//-------------------------------------------------
+
+/// 상단 기존 코드 
+TabMenu.prototype.init=function(){
+	this.$tabMenu = $("#tabMenu1");
+	this.$menuItems = this.$tabMenu.find("li");
+}
+
+/// 변경 코드 
+TabMenu.prototype.init = function(selector){
+	this.$tabMenu = $(selector);
+	this.$menuItems = this.$tabMenu.find("li");
+}
+
+```
+
+함수 기반 클래스와 동일하게 하나의 탭메뉴 클래스로 여러 개의 탭메뉴를 만들 수 있는 장점이 있습니다. 프로토타입 방식의 가장 큰 특징은 모든 인스턴스가 prototype에 만든 메서드를 공유해서 사용한다는 점이죠, 함수기반은 인스턴스 내부마다 독립적으로 메서드를 생성하지만 프로토 타입은 prototype 만들어져 있는 메서드를 공유해서 사용합니다. 위 코드에서 TabMenu.prototype 에 init() ,initEvent(), setSelectItem() 이 메서드는 한번만 만들어 집니다.
+
+prototype 의 또 하나의 장점은 prototype을 이용해 상속을 구현할 수 있습니다.
+
+
 
 
 
