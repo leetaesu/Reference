@@ -43,9 +43,9 @@ important 10000점 ,인라인 스타일 1000점 , id는 100점 , 클래스는 10
 .wrap .content .inBox .pen_group{width:20px; height:30px}  
 .wrap .content .inBox .pen_group .red_pen{color:red}  
 ```
-기존 css방식에서는 중첩의 개념을 다 선언해줌으로써 css 점수를 적용해서 코드자체가 보기도 불편할뿐더러 유지보수 측면에서 좋지 않았습니다. 
+기존 css방식에서는 중첩의 개념을 다 선언해줌으로써 css 점수를 적용해서 코드자체가 보기도 불편할뿐더러 유지보수 측면에서 상당히 나쁜편이었죠...
 
-아래 소스는 기존 css를 less 방식으로 변경 해보았습니다.
+하지만 아래 less 의 중첩 규칙을 사용하면 새로운 css 추가되도 관리하기가 쉽고 편리해져요
 
 ```css
 .wrap{
@@ -68,4 +68,51 @@ important 10000점 ,인라인 스타일 1000점 , id는 100점 , 클래스는 10
 
 ```
 
-위에 방식처럼 불필요한 중복되는 코드를 없애면서 코드가 한결 보기 쉽게 변했어요.
+녹색펜(green_pen)이 추가로 생겼는데, 난 이펜을 펜이 모여있는곳 (pen_group)에 넣고 싶으면 바로 class를 생성하여 넣으시면 됩니다!
+
+응용을 하자면 선택자와 클래스를 동시에 사용할 수 있는 편리함도 있어요. 아래에 소스로 보여드릴게요
+
+
+ex) 
+1)red_pen 과 green_pen을  float으로 처리해주세요. 
+2)펜 앞에 타이틀 "PEN" 이라고 문구를 넣어주세요 
+3)첫번째 inBox 와 마지막 inBox 에는 강조를 주세요.
+
+
+```css
+.wrap{
+	.content{
+		.inBox{
+			border:1px solid red;
+			:first{ 	// .inBox 첫번째 선택
+				background:blue; 
+			}
+			:last{ 	// .inBox 마지막 선택 ㅋ
+				background:orange; 
+			}
+			.pen_group{
+				width:20px;
+				height:30px;
+				:before{
+					content:"PEN";
+					font-size:14px;
+				}
+				:after{
+					clear:both;
+					display:block;
+					content:"";
+				}
+				.red_pen{
+					float:left;
+					color:red;
+				}
+				.green_pen{
+					float:left;
+					color:green;
+				}
+			}
+		}
+	}
+}
+
+```

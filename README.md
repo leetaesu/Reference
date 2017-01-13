@@ -38,7 +38,7 @@
 </ol>
 
 
-### css  11강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/css/]
+### less  1강   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Folder[/css/]
 <ol>
   <li>less 통합 <strong>[진행중]</strong> <a href="https://github.com/leetaesu/Reference/blob/master/less/less1.md">강의 바로가기</a> </li>
 </ol>
