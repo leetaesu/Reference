@@ -36,7 +36,7 @@ important 10000점 ,인라인 스타일 1000점 , id는 100점 , 클래스는 10
 그래서 우리는 css 작성할때 순서대로 표기를 하고 있죠? 예시를 보여드릴게요
 
 
-### 기존 css 방식
+#### 기존 css 방식
 
 ``` css
 .wrap .content .inBox{border:1px solid red}  
@@ -47,6 +47,7 @@ important 10000점 ,인라인 스타일 1000점 , id는 100점 , 클래스는 10
 
 하지만 아래 less 의 중첩 규칙을 사용하면 새로운 css 추가되도 관리하기가 쉽고 편리해져요
 
+#### less 방식
 ```css
 .wrap{
 	.content{
@@ -79,6 +80,8 @@ important 10000점 ,인라인 스타일 1000점 , id는 100점 , 클래스는 10
 3)첫번째 inBox 와 마지막 inBox 에는 강조를 주세요.    
 **
 
+
+#### less 방식
 ```css
 .wrap{
 	.content{
