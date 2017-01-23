@@ -157,7 +157,7 @@ js피들러 : <https://jsfiddle.net>
 
 
 ###### ex) 변수 지정 및 선언
-``` css   
+``` less   
 @nice-blue: #5B83AD;  
 @light-blue: @nice-blue + #111;   
 .header{color: @light-blue;}
@@ -188,13 +188,34 @@ js피들러 : <https://jsfiddle.net>
 
 이건 font-size만 가능한 부분이 아니기 때문에 원하는 부분의 작업을 효율적으로 할 수 있습니다.
 
+#####변수는 여기 까지 정리하지만, 다음에 정리되는 믹스인에서도 많이 볼 수 있을 거에요.
 
+###믹스인은 less를 더욱 효율적이고 간편하게 사용할 수 있게 만들어 주는 문법입니다.
 
+클래스 안에 클래스를 넣어서 관리를 할수 있다는 말이죠. 
+.box 라는 클래스가 있습니다 .box 클래스는 박스의 면색,라인색,모서리등 box로 표현해주는 클래스가 있습니다.
 
+ex) 기존 css 예제
 
+``` css    
+.box{
+	border:1px solid blue;
+	background:yellow;
+	border-radius:5px;
+}
+```
 
+이런 기본적인 구조의 css를 해당 영역마다 추가하고 싶을때는 
 
+```html
+<div class="smail box"></div>
+<span class="gate box"></span>
+<button class="megaport box"></button>
+<div class="smail box"></div>
+```
+이런식으로 html에 클래스를 추가하여 사용을 합니다.
 
+그러면 
 
 
 
