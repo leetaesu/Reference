@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+html {
+    font-size: 12px;
+    -ms-overflow-style: scrollbar;
+}
+body {
+    overflow-x: auto;
+    padding:0;
+    min-width:320px;
+    font-family: @font-family-base;
+    font-size: @font-size-base-admin;
+    line-height: @line-height-base;
+    color: @text-color;
+    background-color: @body-bg;
+    @media (max-width: @grid-float-breakpoint-max) {
+    	font-family:@font-family-base-m;
+    }
+}
+body,input,textarea,select,table, button{
+    font-family: @font-family-base;
+    @media (max-width: @grid-float-breakpoint-max) {
+		font-family:@font-family-base-m;
+	}
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+
+    caption {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+}
+.main-content-fluid{
+    margin-top:61px;
+    background-color:#eef1f3;
+    @media (max-width: @grid-float-breakpoint-max) {
+        margin-top:46px;
+    }
+}
+.headline{
+    padding-left:40px;
+    margin-top:0;
+    margin-bottom:0;
+    color:@text-color-headline;
+    line-height: 26px;
+    padding-top: 18px;
+    padding-bottom: 16px;
+    .text-span {
+        vertical-align: middle;
+        margin-top: -2px;
+        margin-left: 13px;
+    }
+    &.headline-sm{
+        margin-bottom:-15px;
+    }
+    &.headline-lg{
+        padding-left: 40px;
+        padding-right: 40px;
+        @media (max-width: @grid-float-breakpoint-max) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    @media (max-width: @grid-float-breakpoint-max) {
+        padding-left:15px;
+    }
+}
+// admin booking button wrapper
+.header-button-wrap {
+    .clearfix();
+    .right-button-wrap {
+        margin-top:-10px;
+        margin-bottom: 15px;
+        text-align: right;
+    }
+    .form-group-search {
+         padding:0 16px 16px 16px;
+    }
+}
+@media (min-width: @screen-sm-min) {
+    .header-button-wrap {
+        position: relative;
+        .headline {
+            float: left;
+            padding-right: 0;
+            &.headline-lg{
+                padding-right: 40px;
+            }
+        }
+        .form-group-search {
+            float:right;
+            width:290px;
+            padding:0;
+            margin:15px 134px 0 0;
+        }
+        .right-button-wrap {
+            position: absolute;
+            right: 0;
+            top:0;
+            float:right;
+            margin-top:15px;
+            margin-bottom: 0;
+        }
+    }
+}
+// Links
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}

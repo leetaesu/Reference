@@ -1,0 +1,169 @@
+//
+// Badges
+// --------------------------------------------------
+
+
+// Base class
+.badge {
+    position: relative;
+//  display: inline-block;
+//  min-width: 10px;
+//  padding: 3px 7px;
+//  font-size: @font-size-small;
+//  font-weight: @badge-font-weight;
+//  color: @badge-color;
+//  line-height: @badge-line-height;
+//  vertical-align: baseline;
+//  white-space: nowrap;
+//  text-align: center;
+//  background-color: @badge-bg;
+//  border-radius: @badge-border-radius;
+//
+//  // Empty badges collapse automatically (not //available in IE8)
+//  &:empty {
+//    display: none;
+//  }
+//
+//  // Quick fix for badges in buttons
+//  .btn & {
+//    position: relative;
+//    top: -1px;
+//  }
+//  .btn-xs & {
+//    top: 0;
+//    padding: 1px 5px;
+//  }
+//
+//  // Hover state, but only for links
+//  a& {
+//    &:hover,
+//    &:focus {
+//      color: @badge-link-hover-color;
+//      text-decoration: none;
+//      cursor: pointer;
+//    }
+//  }
+//
+//  // Account for badges in navs
+//  a.list-group-item.active > &,
+//  .nav-pills > .active > a > & {
+//    color: @badge-active-color;
+//    background-color: @badge-active-bg;
+//  }
+//  .nav-pills > li > a > & {
+//    margin-left: 3px;
+//  }
+    &.badge-xs{
+        padding: 0;
+        width: 12px;
+        height:12px;
+    }
+}
+.badge-con{
+    display: inline-block;
+}
+.badge-box{
+    padding-top:5px;
+    float:right;
+    @media (max-width: @screen-sm-max){
+        float:none;
+    }
+    .badge-info{
+        display: inline-block;
+        margin-right: 16px;
+        font-size: 12px;
+        @media (max-width: @screen-sm-max){
+            margin-right:12px;
+        }
+        > a {
+            margin-left:5px;
+        }
+    }
+    .badge-info{
+        display: inline-block;
+        margin-right: 16px;
+        font-size: 12px;
+        @media (max-width: @screen-sm-max){
+            margin-right:12px;
+        }
+        > a {
+            margin-left:5px;
+        }
+    }
+}
+.btn-move-sell {
+    float:right;
+    @media (max-width: @screen-sm-max){
+        float:none;
+        margin: 6px 0 7px;
+    }
+}
+.panel-title-resp {
+    display: inline-block;
+    line-height: 30px;
+    @media (max-width: @screen-sm-max){
+        display: block;
+        line-height: inherit;
+    }
+}
+
+.badge-box.multiple{
+    clear: both;
+    padding-top: 8px;
+    margin-bottom: -5px;
+    float:none;
+
+    .badge-con{
+        @media (max-width: @screen-sm-max){
+            float: left;
+            width:50%;
+            min-height: 26px;
+        }
+        @media (max-width: 355px ){
+            .badge-info {
+                margin-left: 2px;
+                margin-right: 0;
+                font-size: 11px;
+                letter-spacing: -0.5px;
+            }
+        }
+    }
+    .badge{
+        margin-bottom: 5px;
+        @media (max-width: @screen-sm-max){
+            margin-left: 0;
+        }
+    }
+    .text-red{
+        font-weight: bold;
+    }
+}
+.ribbon{
+    margin: 1px 5px 1px 0;
+    margin-right: 5px;
+    width: 14px;
+    height:18px;
+    border-radius: 2px !important;
+    &:before{
+        position: absolute;
+        top: 0;
+        right: -5px;
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 9px solid @state-red-bg;
+        content: '';
+    }
+    &:after{
+        position: absolute;
+        bottom: 0;
+        right: -5px;
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 9px solid @state-red-bg;
+        content: '';
+    }
+}

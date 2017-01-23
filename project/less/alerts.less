@@ -1,0 +1,42 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+.alert {
+    &.alert-style{
+        margin-bottom: 0;
+        padding-top: 90px;
+        height:212px;
+        text-align: center;
+        @media (max-width: @screen-sm-max) {
+            padding-top: 15px;
+            height:auto;
+        }
+        @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+            padding-top: 72px;
+            height:172px;
+        }
+        &.alert-style-md{
+            padding-top: 55px;
+            height:133px;
+            @media (max-width: @screen-sm-max) {
+                padding-top: 15px;
+                height:auto;
+            }
+            @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+                padding-top: 55px;
+                height:133px;
+            }
+        }
+    }
+}
+
+.alert-white {
+    .alert-variant(@alert-white-bg; @alert-white-border; @alert-white-text);
+}
+.alert-confirm {
+    .alert-variant(@alert-confirm-bg; @alert-confirm-border; @alert-confirm-text);
+}

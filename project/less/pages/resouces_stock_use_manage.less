@@ -1,0 +1,273 @@
+//
+// resourcesStockManage
+// --------------------------------------------------
+
+/* resourcesStockManage*/
+// tbody
+.table {
+    .switch-body {
+
+        .fa-pencil {
+            font-size: 13px;
+        }
+
+        .form-switch,
+        .btn-edit-number {
+            display: inline-block;
+            width:28px;
+            height: 25px;
+            text-align: center;
+            padding:0;
+            font-size: 13px;
+            border-radius: 3px;
+            color:#666;
+            vertical-align: middle;
+        }
+        .form-switch {
+            margin: -1px 0 -1px 5px;
+            width:37px;
+        }
+        .btn-edit-number {
+            position: absolute;
+            top:-3px;
+            height: auto;
+            width:auto;
+            padding:3px 0;
+            &.edit {
+                padding-top: 4px;
+                right:0;
+            }
+            &.save ,
+            &.cancel {
+                top:2px;
+            }
+            &.save {
+                right:21px;
+            }
+            &.cancel {
+                right:0;
+            }
+        }
+        tr {
+            &:first-child {
+                td {
+                    border-bottom:1px solid #ebebeb;
+                }
+                .disable {
+                    border-bottom:1px solid #ddd;
+                }
+            }
+        }
+        th, td {
+            vertical-align: middle;
+            min-width: 120px;
+            font-weight: 400;
+            text-align: center;
+
+        }
+        th {
+            background-color: #fcfcfd;
+            padding:10px;
+            line-height: 18px;
+        }
+        td {
+            padding:5px 10px;
+            height: 37px;
+            line-height: 13px;
+        }
+        .sw-check {
+            position: relative;
+            display: block;
+            text-align: center;
+            &.edit-mode {
+                padding-right: 40px;
+            }
+            > span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .hover {
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        // 비활성화시
+        &.close-product {
+            tr {
+                &:first-child {
+                    td {
+                        border-bottom:1px solid #ddd;
+                    }
+                }
+            }
+            th, td {
+                background-color: @brand-gray;
+                cursor: default;
+            }
+            .sw-check {
+                opacity: 0.3;
+                filter: alpha(opacity=30);
+            }
+            a, .hover {
+                cursor: default;
+            }
+        }
+    }
+}
+
+.switch-scroll-table{
+    &.table-wrap{
+        padding-top:104px;
+        max-height: 823px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        @media (max-width: @grid-float-breakpoint-max) {
+            padding-top:0 !important;
+        }
+        .table-box{
+            max-width: 100%;
+            min-width:1742px;
+            max-height: 701px;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            @media (max-width: @grid-float-breakpoint-max) {
+                border-top:0 !important;
+            }
+            .table{
+                table-layout: fixed;
+                width: 1725px;
+            }
+        }
+    }
+    .v-center {
+        display: table-cell;
+        padding-left:10px;
+        padding-right:10px;
+        vertical-align: middle;
+
+    }
+    thead tr th{
+        @media (max-width: @grid-float-breakpoint-max) {
+            height: 105px !important;
+            border-bottom:1px solid #ddd !important;
+        }
+    }
+    thead tr th div[class*="-txt"]{
+        position: absolute;
+        padding: 8px 0;
+        line-height: 18px;
+        @media (max-width: @grid-float-breakpoint-max) {
+            position: static;
+        }
+    }
+    thead tr th.th1{
+        width:120px;
+        height:105px;
+        .th1-txt{
+            display: table;
+            top: 0;
+            width: 121px;
+            height:105px;
+            border-right:1px solid #ddd;
+        }
+    }
+    thead tr th.th2{
+        width:105px;
+        height:70px;
+        .th2-txt{
+            display: table;
+            top: 0;
+            width:106px;
+            height:70px;
+            border-right:2px solid #ddd;
+        }
+        .th2-txt2{
+            top: 70px;
+            width:106px;
+            height:34px;
+            border-top:1px solid #ddd;
+            border-right:2px solid #ddd;
+        }
+    }
+    thead tr th.th3{
+        width:150px;
+        height:70px;
+
+        .th3-txt{
+            display: table;
+            top: 0;
+            width:151px;
+            height:70px;
+            border-right:1px solid #ddd;
+        }
+        .th3-txt2{
+            top: 70px;
+            padding: 6px 0;
+            width:151px;
+            height:34px;
+            border-top:1px solid #ddd;
+            border-right:1px solid #ddd;
+
+            &.disabled-cell {
+                background-color: @brand-gray;
+                border-left:1px solid #ddd;
+            }
+        }
+    }
+    thead tr th.th0{
+        width:150px;
+        .th0-txt{
+            top: 0;
+            width:151px;
+            height:105px;
+        }
+    }
+    .table > tbody > tr > th,
+    .table > tbody > tr:last-child > td{
+        border-bottom :1px solid #ddd !important;
+    }
+    .table > tbody > tr > th{
+        font-weight: normal;
+    }
+    .table > tbody > tr > th[rowspan] {
+       background-color: #fcfcfd;
+    }
+    .table > tbody > tr:first-child > th{
+        border-top: none;
+    }
+    .table > tbody > tr > th[scope] {
+        border-left: 1px solid #ddd;
+    }
+    .table > tbody > tr > th[rowspan] {
+        border-left: 0;
+    }
+    .table > tbody > tr > td.empty-cell {
+        border-bottom: none;
+    }
+    .table > tbody > tr > td {
+        .bootstrap-switch-container {
+            .bootstrap-switch-handle-on,
+            .bootstrap-switch-handle-off {
+                white-space: nowrap;
+            }
+        }
+        &.disabled-cell {
+            background-color: @brand-gray;
+            color:#b8b8b8;
+            .text-success {
+                opacity: 0.5;
+            }
+            &.disabled-top {
+                border-bottom :1px solid #e5e5e5;
+            }
+        }
+        &.usenot-cell {
+            background-color: @brand-gray;
+            &.usenot-top {
+                border-bottom :1px solid #e5e5e5;
+            }
+        }
+    }
+}

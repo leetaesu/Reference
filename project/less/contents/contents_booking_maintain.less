@@ -1,0 +1,53 @@
+//
+// Contents booking  maintain
+// --------------------------------------------------
+
+.fixed-code{
+    display: table;
+    .code-switch{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .input-group{
+        padding-left: 15px;
+        .input-sm{
+            width:230px;
+        }
+    }
+    @media (max-width: @grid-float-breakpoint-max) {
+        display: block;
+        .code-switch{
+            display: block;
+        }
+        .input-group{
+            margin-top: 10px;
+            padding-left: 0;
+            .input-sm{
+                width: 100%;
+            }
+        }
+    }
+}
+.item-required{
+    position: relative;
+    padding-left: 10px;
+    em{
+        position: absolute;
+        left: 0;
+    }
+    &.block-item {
+        padding-left: 0;
+        em{
+            position: static;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+.main-title{
+    font-size: 16px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #666;
+}

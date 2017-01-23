@@ -1,0 +1,66 @@
+//
+// Contents
+// --------------------------------------------------
+.board{
+	.board-lst{
+		table-layout:fixed;
+        margin-bottom: 10px;
+		tbody{
+            border-bottom:1px solid #ddd;
+            tr:first-child td{
+                border-top:0;
+            }
+        }
+		th, td{
+            text-align:center;
+        }
+		td.tit{
+			text-align:left;
+			a {
+                display:block;width:100%;
+                .text-overflow();
+            }
+			.text-info{
+				color:#1f6bad;
+			}
+		}
+        &.nopager{
+            margin-bottom: 40px;
+            @media (max-width: @screen-xs) {
+                margin-bottom: 35px;
+            }
+        }
+	}
+	.board-srch{
+		margin:20px 0 10px;
+		select.input-sm{
+            height:30px;
+            line-height:30px;
+        }
+	}
+	.board-view{
+		margin-bottom:15px;
+		.head{
+			overflow:hidden;
+			padding:8px 0;
+            border-bottom:2px solid #ddd;
+			.tit{
+                display:inline-block;
+                font-size:16px
+            }
+			.count{
+				display:inline-block;
+				float:right;
+				line-height:22px;
+				.num{
+                    display:inline-block;
+                    width:80px;
+                    text-align:center}
+			}
+		}
+		.view{
+            padding:30px 0 40px;
+            border-bottom:1px solid #ddd;
+        }
+	}
+}

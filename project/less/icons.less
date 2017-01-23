@@ -1,0 +1,288 @@
+//
+// Icons
+// --------------------------------------------------
+
+// .menu-icon{
+//     display: inline-block;
+//     min-width: 20px;
+//     min-height: 20px;
+//     margin-right: 5px;
+
+//     background:url(/images/sp_icons.png);
+//     text-align: center;
+//     vertical-align: middle;
+
+//     &.cog{
+//         background-position: 0 0;
+//     }
+//     &.person{
+//         background-position: -30px 0;
+//     }
+//     &.reserve{
+//         background-position: -59px 0;
+//     }
+//     &.manage{
+//         background-position: -88px 0;
+//     }
+//     &.coupon{
+//         background-position: -117px 0;
+//     }
+//     &.analysis{
+//         background-position: 0 -22px;
+//     }
+//     &.permissions {
+//         background-position: -224px -22px;
+//     }
+
+//     @media (min-width: @screen-lg-min) and (max-width: 1570px)  {
+//         //display: none;
+//     }
+//     @media (min-width: @screen-md-min) and (max-width: 1023px) {
+//         //display: none;
+//     }
+
+// }
+.arrow{
+    position: absolute;
+    top:20px;
+    right:20px;
+    display: inline-block;
+    width: 12px;
+    height: 7px;
+
+    background:url(/images/sp_icons.png);
+    background-position: -146px 0;
+
+    &.position-arrow{
+        position: relative;
+        top: 2px;
+        left: 0;
+        height: 12px;
+
+        @media (min-width: @screen-lg-min) and (max-width: 1570px)  {
+            display: inline-block;
+        }
+    }
+    &.calendar-arrow{
+        top: 8px;
+        left: 10px;
+        height: 12px;
+
+        @media (min-width: @screen-lg-min) and (max-width: 1570px)  {
+            display: inline-block;
+        }
+    }
+    &.calendar-arrow[class*="double"]{
+            left: 6px;
+        }
+    &.caret-up{
+        width: 12px;
+        background-position: -146px 0;
+    }
+    &.caret-down{
+        width: 12px;
+        background-position: -168px 0;
+    }
+    &.caret-left{
+        width: 8px;
+        background-position: -190px -0;
+        &.info{
+            width: 10px;
+            background-position: -24px -22px;
+        }
+    }
+    &.caret-double-left{
+        width: 16px;
+        background-position: -208px -0;
+    }
+    &.caret-right{
+        width: 8px;
+        background-position: -233px -0;
+        &.info{
+            width: 10px;
+            background-position: -38px -22px;
+        }
+    }
+    &.caret-double-right{
+        width: 16px;
+        background-position: -251px 0;
+    }
+}
+.collapsed .caret {
+    border-top: 0;
+    border-bottom: 4px solid;
+    content: "";
+}
+a.collapsed{
+    .arrow{
+        background:url(/images/sp_icons.png);
+        background-position: -168px 0;
+    }
+}
+
+.icon-close{
+    position: relative;
+    top:1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+
+    background:url(/images/sp_icons.png);
+
+    &.close-white{
+        background:url(/images/ico_close.png);
+        background-size: 12px 12px;
+        background-position: 0 0;
+    }
+    &.close-gray{
+        background-position: -298px 0;
+    }
+}
+//.icon-calendar{
+//    position: absolute;
+//    top: 6px;
+//    left:7px;
+//    display: inline-block;
+//    margin-top: -1px;
+//    width: 14px;
+//    height: 16px;
+//
+//    background:url(images/sp_icons.png);
+//    background-position: -320px 0;
+//}
+.sp-icon{
+	display:inline-block;
+	overflow:hidden;
+	position:relative;
+	top:1px;
+	background:url(/images/sp_icons.png);
+	line-height:9999px;
+
+	&.ico-set{
+		width:16px;
+		height:16px;
+		margin:0 -4px -3px;
+		background-position:-362px 0;
+	}
+	&.ico-prev{
+		width:15px;
+		height:15px;
+		margin:2px 0px 0px 2px;
+		background-position:-384px 0;
+	}
+	&.ico-q{
+		width:14px;
+		height:14px;
+		background-position:-342px 0;
+		vertical-align:-3px;
+//		.panel-title &{
+//			vertical-align:-1px;
+//		}
+		.form-group label &{
+			margin-left:1px;
+		}
+		div[class|="col"]+& {
+			margin:10px 0 0 -10px;
+			@media (max-width: @grid-float-breakpoint-max) {
+				& {margin:5px 0 0 15px;}
+			}
+		}
+		@media (max-width: @grid-float-breakpoint-max) {
+			.pull-right & {
+				vertical-align:5px;
+			}
+            .panel-heading .pull-right &{
+                vertical-align:-1px;
+            }
+		}
+	}
+    &.ico-view{
+        width:23px;
+        height:19px;
+        margin: -1px -8px -5px -7px;
+        background-position:-378px -16px;
+    }
+    &.ico-caret-up{
+        top: 0;
+        .size(12px,8px);
+        background-position:-364px -27px;
+    }
+    &.ico-caret-down{
+        top: 1px;
+        .size(12px,8px);
+        background-position:-350px -27px;
+    }
+    &.ico-alert2{
+        top: 0;
+        margin-top: 5px;
+        .size(15px,15px);
+        background-position:-330px -20px;
+    }
+    &.ico-minus{
+        .size(30px,30px);
+        background-position:-542px 0;
+    }
+    &.ico-plus{
+        .size(30px,30px);
+        background-position:-576px 0;
+    }
+    &.ico-del{
+        .size(22px,22px);
+        background-position:-522px 3px;
+    }
+    &.ico-del-sm{
+        .size(10px,10px);
+        top:0;
+        background-position:-526px -16px;
+    }
+    &.ico-save{
+        .size(13px,10px);
+        background-position:-129px -24px;
+    }
+    &.ico-cancel{
+        .size(10px,10px);
+        background-position:-146px -24px;
+    }
+    &.ico-zoomin{
+        .size(13px,13px);
+        background-position:-160px -24px;
+    }
+    &.ico-zoomout{
+        .size(13px,3px);
+        background-position:-160px -39px;
+    }
+    &.ico-calendar{
+        .size(15px,15px);
+        background-position:-206px -22px;
+    }
+}
+.btn-calendar-icon{
+    padding: 5px 7.5px !important;
+    width: 30px;
+}
+.nessasary{
+	display:inline-block;
+	overflow:hidden;
+	background:url(/images/sp_icons.png) no-repeat -507px 0;
+	.size(9px,7px);
+	line-height:999px;
+}
+.ico-alert{
+    display:inline-block;
+    overflow:hidden;
+    background:url(/images/ico_alert.png) no-repeat 0 0;
+    background-size: 60px 60px;
+    .size(60px,60px);
+}
+.icon-toolbox{
+    a{
+        text-decoration: none;
+        & + a{
+            margin-left: 4px;
+        }
+    }
+    .fa-pencil{
+        font-size: 13px;
+        color:#8195a5;
+    }
+}

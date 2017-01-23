@@ -1,0 +1,133 @@
+//
+// Contents_Notice
+// --------------------------------------------------
+
+.notice-contents-details{
+    padding-top:10px;
+    > p:last-child{
+        margin-bottom: 0;
+    }
+    .dot{
+        display: block;
+        padding-left: 15px;
+        &:before{
+            content:"•";
+            font-weight:100;
+            color:inherit;
+        }
+    }
+    .dash{
+        display: block;
+        padding-left: 15px;
+        &:before{
+            margin:0 3px 0 -11px;
+            content:" - ";
+            font-weight:100;
+            color:inherit;
+        }
+    }
+    .indentX (@index) when (@index > 0) {
+        .indent-@{index} {
+            position: relative;
+            display: block;
+            padding-left: 15px;
+            &:before{
+                position: absolute;
+                left: 0;
+                font-weight: bold;
+                content:"@{index})";
+                color:inherit;
+            }
+        }
+        .indentX(@index - 1);
+    }
+    .indentX (@index) when (@index = 0) {
+        .indent {
+            position: relative;
+            display: block;
+            padding-left: 15px;
+            &:before{
+                position: absolute;
+                left: 0;
+                font-weight: bold;
+                content:" ";
+                color:inherit;
+            }
+        }
+    }
+    .indentX(2);
+    .notice-img.m40{
+        margin:40px 0 !important;
+    }
+    .indent90{
+        padding-left: 89px;
+        @media (max-width: @grid-float-breakpoint-max){
+            padding-left: 0;
+        }
+    }
+    .img-responsive{
+        @media screen and (-webkit-min-device-pixel-ratio: 0){
+            max-width:100%;
+        }
+    }
+}
+.notice-img{
+    max-width:680px;
+}
+.notice-img2{
+    max-width:270px;
+}
+.notice-img3{
+    max-width:630px;
+}
+.notice-img4{
+    max-width:360px;
+}
+.notice-event{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    max-width:690px;
+    margin:0 auto;
+    text-align: center;
+    img{
+        position: relative;
+    }
+}
+.notice-lnk{
+    position: relative;
+    .nbtn{
+        position: absolute;
+        right:7.1%;
+        width: 17%;
+        height: 10%;
+        font:0px/0 a;
+    }
+    .lnk-signup{
+        top: 10.5%;
+    }
+    .lnk-signup2{
+        top: 25.8%;
+    }
+    .lnk-signup3{
+        top: 54.7%;
+        right:35.5%;
+        width: 27.2%;
+        height: 7.6%;
+    }
+    .lnk-signup4{
+        top: 38.9%;
+    }
+    .lnk-signup5{
+        top: 58%;
+        right:16.8%;
+        width: 12.5%;
+        height: 5.1%;
+    }
+    .lnk-signup6{
+        top: 63.5%;
+        left:11.1%;
+        width: 27.2%;
+        height: 7.6%;
+    }
+}

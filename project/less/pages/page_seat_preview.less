@@ -1,0 +1,368 @@
+//
+// Seat Preview
+// --------------------------------------------------
+
+/* Seat Preview*/
+.seat-preview-wrap{
+    margin:0 -15px;
+    padding: 0 40px;
+    min-width: 1263px;
+    min-height:~'calc(100vh - 60px)';
+    background-color: #fff;
+    .seat-preview-header{
+        margin-bottom: 30px;
+        border-bottom:2px solid #ddd;
+        .h2{
+            margin:0;
+            padding-top: 39px;
+            padding-bottom: 14px;
+            .ico-q{
+                vertical-align: 0;
+            }
+        }
+    }
+    .seat-preview-body{
+        overflow:hidden;
+        position: relative;
+        padding-bottom: 30px;
+        min-height: 555px;
+        height: ~'calc(100vh - 162px)';
+        &.stock-body{
+            .seat-preview-dataset{
+                min-height: 470px;
+                height: ~'calc(100vh - 246px)';
+                .selection-title{
+                    width:90px;
+                }
+                .selection-btns{
+                    display: inline-block;
+                    .btn-white.active{
+                        color: #fff;
+                    }
+                    .btn-white:first-child.active{
+                        background-color: @brand-success;
+                        border-color: darken(@brand-success, 12%);
+                    }
+                    .btn-white:last-child.active{
+                        background-color: @brand-danger;
+                        border-color: darken(@brand-danger, 12%);
+                    }
+                }
+                .table-stock{
+                    .table-row-20{
+                        max-height: 756px;
+                        .table-box{
+                            overflow-x: hidden;
+                            max-height: 722px;
+                        }
+                    }
+                }
+                .input-stock{
+                    margin-right: -15px;
+                    width: 100%;
+                    border: none;
+                    text-align: center;
+                }
+            }
+            .seat-preview-stage-wrap{
+                .tip{
+                    float:left;
+                    margin-top: 3px;
+                    font-size:12px;
+                }
+                .badge-info-wrap{
+                    margin:0;
+                    .badge{
+                        .square(20px);
+                        vertical-align: middle;
+                        &:nth-child(1){
+                            background-color: #ccc;
+                        }
+                        &:nth-child(3){
+                            background-color: #ccc;
+                            border:3px solid #888;
+                        }
+                        &:nth-child(5){
+                            background-color: #fff;
+                            border:3px solid #888;
+                        }
+                        &:nth-child(7){
+                            background-color: #bfbfbf;
+                            border:3px solid #000;
+                        }
+                        &:nth-child(9){
+                            background-color: @green;
+                            border:1px solid #00b336;
+                        }
+                    }
+                    .badge-info {
+                        vertical-align: -1px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .seat-preview-stage{
+                    position: absolute;
+                    margin-top:32px;
+                    min-height: 492px;
+                    height:~'calc(100% - 33px)';
+                }
+                .zoom-control{
+                    top: 43px;
+                }
+            }
+        }
+        .seat-preview-dataset{
+            overflow-y: scroll;
+            display: inline-block;
+            float: left;
+            margin-right: 30px;
+            padding-right: 22px;
+            width:424px;
+            min-height:525px;
+            height: ~'calc(100vh - 192px)';
+            border-right: 1px solid #ddd;
+            .stage-title-block{
+                position: relative;
+                padding-left: 105px;
+                margin-bottom: 11px;
+                line-height: 1.4em;
+            }
+            .stage-title{
+                position: absolute;
+                top:0;
+                left:0;
+                font-size: 14px;
+                color: @gray-dark;
+            }
+            .slot-title-block{
+                position: relative;
+                .h3{
+                    position: absolute;
+                    top:10px;
+                    margin: 0;
+                    font-size: 14px;
+                }
+                .slot-block{
+                    position: relative;
+                    padding-left: 110px;
+                }
+            }
+            .h3{
+                margin-top: 29px;
+                margin-bottom: 6px;
+                color: @gray-dark;
+                .btn-xs{
+                    vertical-align: 1px;
+                }
+            }
+            .table{
+                table-layout: fixed;
+                thead > tr > th{
+                    color: @gray-dark;
+                }
+                tbody > tr > td{
+                    padding: 8px 5px;
+                    word-break: break-all;
+                    &:last-child{
+                        padding-right: 20px !important;
+                    }
+                }
+            }
+            .table-wrap{
+                position: relative;
+                margin-top: 12px;
+                .table-box{
+                    .table > thead > tr > th{
+                        .th-txt{
+                            &.first{
+                                width:60px;
+                            }
+                        }
+                    }
+                }
+                &.table-row{
+                    margin-top: 14px;
+                    .table-box{
+                        .table > thead > tr > th{
+                            .th-txt{
+                                &.second{
+                                    width:163px;
+                                }
+                                &.third{
+                                    width:158px;
+                                }
+                            }
+                        }
+                        .table > tbody > tr> td.second{
+                            padding: 8px 45px;
+                        }
+                    }
+                }
+                &.table-row-10{
+                    .table-box{
+                        .table > thead > tr > th{
+                            .th-txt{
+                                border-left:0;
+                                &.second{
+                                    width:85px;
+                                }
+                                &.third{
+                                    width:237px;
+                                }
+                            }
+                        }
+                        .table > tbody > tr > td.empty-row,{
+                            padding: 0 !important;
+                            height:9px;
+                            font:0px/0 a;
+                        }
+                        .table > tbody > tr > td{
+                            padding: 6px 5px;
+                            border-bottom: 0;
+                            border-left: 0;
+                            line-height: 17px;
+                            &:nth-child(2){
+                                padding: 6px 6px;
+                            }
+                            &:nth-child(3){
+                                padding: 6px 0 6px 10px;
+                            }
+                            &:last-child{
+                                padding: 6px 0;
+                            }
+                        }
+                    }
+                }
+                &.table-row-20{
+                    .table-box{
+                        .table > thead > tr > th{
+                            .th-txt{
+                                &.second{
+                                    width:85px;
+                                }
+                                &.third{
+                                    width:237px;
+                                }
+                            }
+                        }
+                        .table > tbody > tr > td{
+                            line-height: 17px;
+                            &:nth-child(2){
+                                padding: 8px 6px;
+                            }
+                            &:last-child{
+                               padding: 8px 15px 8px 20px;
+                            }
+                        }
+                    }
+                }
+                &.table-input-sm{
+                    .table tbody > tr > td{
+                        padding: 4px 5px;
+                    }
+                }
+            }
+            .table-stock{
+                .table-row-20{
+                    .table-box{
+                        .table > thead > tr > th:nth-child(1) .th-txt{
+                            width:84px;
+                        }
+                        .table > thead > tr > th:nth-child(2) .th-txt{
+                            width:100px;
+                        }
+                        .table > thead > tr > th:nth-child(3) .th-txt{
+                            width:60px;
+                        }
+                        .table > thead > tr > th:nth-child(4) .th-txt{
+                            width:70px;
+                        }
+                        .table > thead > tr > th:nth-child(5) .th-txt{
+                            width:70px;
+                        }
+                        .table > tbody > tr > td{
+                            padding: 7px 10px 8px !important;
+                        }
+                    }
+                }
+            }
+            .seat-bundle-name{
+                overflow-y: hidden;
+                padding-left: 10px;
+                margin-left: -1px;
+                width:87px;
+                min-height: 20px;
+                background-color: #fff !important;
+                border:1px solid #fff;
+                border-radius: 3px;
+                word-break: break-word;
+                line-height: 19px;
+                vertical-align: middle;
+                box-sizing: content-box;
+                &:focus{
+                    border:1px solid #ccc;
+                    outline: none;
+                }
+            }
+            .editable-box{
+                padding: 0 10px 0 0 !important;
+                border-left: none !important;
+                .editable-controller{
+                    color: inherit;
+                    &:hover,
+                    &:focus{
+                        color: inherit;
+                    }
+                    .fa-pencil{
+                        font-size: 13px;
+                    }
+                    &:last-child{
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .btn-area{
+                position: absolute;
+                bottom:0;
+                margin:0;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                width:424px;
+                background-color: #fff;
+            }
+        }
+        .seat-preview-stage-wrap{
+            overflow: hidden;
+            position: absolute;
+            top:0;
+            left:454px;
+            min-width: 730px;
+            min-height: 525px;
+            width: ~'calc(100vw - 534px)';
+            height: ~'calc(100vh - 192px)';
+            .seat-preview-stage{
+                min-width: 730px;
+                min-height: 525px;
+                width: 100%;
+                height:100%;
+                border:1px solid #dde2e5;
+                background-color: #cdcfd2;
+                .canvas-outer {
+                    width: 100%;
+                    height: 100%;
+                    .seat-normal, .seat-selected, .seat-polygon, .seat-selected-polygon {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .zoom-control{
+                position: absolute;
+                top: 10px;
+                left:10px;
+                width: 30px;
+            }
+        }
+    }
+}
