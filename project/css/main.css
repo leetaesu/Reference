@@ -1,1 +1,7 @@
-.wrap .inCon .computer{color:#808080;font-size:14px;letter-spacing:-1px;line-height:21px}.wrap .inCon :before{display:block;content:"구매자";font-size:18px;color:#f00}.wrap .inCon :after{display:block;content:"가격정보";font-size:28px;color:#000}@media screen and (min-width:768px) and (max-width:1024px){.wrap .inCon .computer{font-size:28px}}
+.wrap {
+  color: white;
+  border: 1px solid #ff0000;
+}
+.wrap {
+  background: black;
+}
